@@ -1,0 +1,13 @@
+{
+  "servers": {
+    "automatehub-github": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["${workspaceFolder}/dist/server.js"],
+      "env": { "GITHUB_TOKEN": "${input:github-token}" }
+    }
+  },
+  "inputs": [
+    { "id": "github-token", "type": "promptString", "description": "GitHub Personal Access Token", "password": true }
+  ]
+}
